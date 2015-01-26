@@ -11,7 +11,7 @@
 ">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://yourdomain.com/">
+  <link rel="canonical" href="http://yourdomain.com/page/2/">
   <link rel="alternate" type="application/rss+xml" title="Welcome" href="http://yourdomain.com/feed.xml" />
 </head>
 
@@ -62,31 +62,27 @@
         
         <div class="media__image">
           
-          <img src="/downloads/pokemon.png" alt="Post Image" title="512x512 mutha fackas">
+          <img src="/downloads/post-header.gif" alt="Post Image" title="512x512 mutha fackas">
 
-          
-            <div class="post-video">Video</div>
           
         </div>
         
         <div class="media__content">
           <header class="post-title">
             <h2>
-              <a class="post-link" href="/event/scientifically-accurate-pokemon">Scientifically Accurate Pokemon!</a>
+              <a class="post-link" href="/jekyll/update/welcome-to-jekyll">Welcome to Jekyll!</a>
             </h2>
           </header>
 
           <footer class="post-meta">
-            <time>Mar 8, 2015</time>
+            <time>Jan 15, 2015</time>
           </footer>
           
           <p class="post-content">
-            Amination Domination High-Def doesn’t think Pokemon is realistic enough, so they made their own version and fixed some things.
-
-
+            You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your...
           </p>
 
-          <a class="post-continue" href="/event/scientifically-accurate-pokemon">Continue</a>
+          <a class="post-continue" href="/jekyll/update/welcome-to-jekyll">Continue</a>
 
         </div>
         
@@ -96,7 +92,7 @@
         
         <div class="media__image">
           
-          <img src="/downloads/hello-world.gif" alt="Post Image" title="512x512 mutha fackas">
+          <img src="/downloads/post-header.gif" alt="Post Image" title="512x512 mutha fackas">
 
           
         </div>
@@ -104,21 +100,21 @@
         <div class="media__content">
           <header class="post-title">
             <h2>
-              <a class="post-link" href="/test/hello-world">Hello World</a>
+              <a class="post-link" href="/test/test">Test Post</a>
             </h2>
           </header>
 
           <footer class="post-meta">
-            <time>Jan 19, 2015</time>
+            <time>Jan 15, 2014</time>
           </footer>
           
           <p class="post-content">
-            This is a terrible little post all about how, my life got twisted upside down. 
+            This is a simple paragraph
 
 
           </p>
 
-          <a class="post-continue" href="/test/hello-world">Continue</a>
+          <a class="post-continue" href="/test/test">Continue</a>
 
         </div>
         
@@ -131,29 +127,30 @@
 <div class="pagination">
 
 	<div class="pull-right">
-		Page 1 of 2
+		Page 2 of 2
 	</div>
 	
 	<div class="pull-left">
 		
+			<a href="/index.html">&lt; Previous</a>
+		
 
 		
 
 			
-			<span>1</span>
+				<a href="/">1</a>
 
 			
 
 		
 
 			
-				<a href="/page/2">2</a>
+			<span>2</span>
+
 			
 
 		
 
-		
-			<a href="/page/2">Next &gt;</a>
 		
 	</div>
 
@@ -168,9 +165,9 @@
 
     if (key == key_prev) {
     	
-    } else if (key == key_next) {
+    		location = "/index.html";
     	
-    		location = "/page/2";
+    } else if (key == key_next) {
     	
     }
   }
