@@ -280,13 +280,20 @@
     overflow: hidden;
     &__image {
         position: relative;
-        float: left;
-        width: 200px;
-        margin-right: 20px;
+        margin-bottom: 10px;
     }
 
     &__content {
         overflow: hidden;
+    }
+}
+
+@media screen and (min-width: $on-palm) {
+    .media__image {
+        float: left;
+        width: 200px;
+        margin-right: 20px;
+        margin-bottom: 0;
     }
 }
 
