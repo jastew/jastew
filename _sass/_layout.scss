@@ -5,6 +5,7 @@
     border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
+    background-color: $card-color;
 
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -276,15 +277,19 @@
  * Media
  */
 .media {
-    margin-bottom: 20px;
     overflow: hidden;
+    margin-bottom: 20px;
+    background-color: $card-color;
+    border-radius: 6px; 
+    box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+
     &__image {
         position: relative;
-        margin-bottom: 10px;
     }
 
     &__content {
         overflow: hidden;
+        padding: 20px;
     }
 }
 
@@ -292,8 +297,6 @@
     .media__image {
         float: left;
         width: 200px;
-        margin-right: 20px;
-        margin-bottom: 0;
     }
 }
 

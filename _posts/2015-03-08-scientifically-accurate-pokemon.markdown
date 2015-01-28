@@ -7,8 +7,8 @@ tags:
   - pokemon
   - league
   - 2015
-image:
-  src: /downloads/pokemon.png
+#image:
+#  src: /downloads/pokemon.png
 video: http://www.youtube.com/user/FOXADHD?feature=watch
 event:
   name: Scientifically Accurate Pokemon!
