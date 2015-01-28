@@ -1,0 +1,34 @@
+<footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">{{ site.title }}</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>{{ site.title }}</li>
+          <li>&copy;{{ site.time | date: "%Y" }} {{ site.data.me.name | upcase }} </li>
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <h3>Members</h3>
+        <ul class="categories">
+          {% for member in site.data.members %}
+            <li>
+              {{ member.name }}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">{{ site.description }}</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>

@@ -1,0 +1,53 @@
+<!-- Pagination Links -->
+<div class="pagination">
+
+	<div class="pull-right">
+		Page {{ paginator.page }} of {{ paginator.total_pages }}
+	</div>
+	
+	<div class="pull-left">
+		{% if paginator.previous_page %}
+			<a href="{{ paginator.previous_page_path }}">&lt; Previous</a>
+		{% endif %}
+
+		{% for page in (1..paginator.total_pages) %}
+
+			{% if page == paginator.page %}
+			<span>{{ page }}</span>
+
+			{% elsif page == 1 %}
+				<a href="/">{{page}}</a>
+
+			{% else %}
+				<a href="/{{ site.paginate_path | replace: ':num', page }}">{{page}}</a>
+			{% endif %}
+
+		{% endfor %}
+
+		{% if paginator.next_page %}
+			<a href="{{ paginator.next_page_path }}">Next &gt;</a>
+		{% endif %}
+	</div>
+
+</div>
+<script>
+  var key_prev = 44,
+      key_next = 46;
+
+  function keyEvent(event)
+  {
+    var key = event.keyCode || event.which;
+
+    if (key == key_prev) {
+    	{% if paginator.previous_page %}
+    		location = "{{ paginator.previous_page_path }}";
+    	{% endif %}
+    } else if (key == key_next) {
+    	{% if paginator.next_page %}
+    		location = "{{ paginator.next_page_path }}";
+    	{% endif %}
+    }
+  }
+
+  document.addEventListener("keypress", keyEvent);
+</script>

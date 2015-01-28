@@ -1,229 +1,47 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+---
 
-  <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Welcome</title>
-  <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-">
-
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://yourdomain.com/">
-  <link rel="alternate" type="application/rss+xml" title="Welcome" href="http://yourdomain.com/feed.xml" />
-</head>
-
-
-  <body>
-
-    <header class="site-header">
-
-  <div class="wrapper">
-
-    <a class="site-title" href="/">Welcome</a>
-
-    <nav class="site-nav">
-      <div class="trigger">
-        
-          
-          <a class="page-link" href="/about/">About Me</a>
-          
-        
-          
-          <a class="page-link" href="/contact/">Contact Me</a>
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      </div>
-    </nav>
-
-  </div>
-
-</header>
-
-
-    <div class="page-content">
-      <div class="wrapper">
-        <div class="home" itemscope itemtype="http://schema.org/Blog">
+<div class="home" itemscope itemtype="http://schema.org/Blog">
 
   <div class="post-list">
 
-    
+    {% for post in paginator.posts %}
       <article class="media" itemProp="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
         
         <div class="media__image">
-          
-          <img src="/downloads/pokemon.png" alt="Post Image" title="512x512 mutha fackas">
+          {% assign image = post.image %}
+          <img src="{{ image.src }}" alt="{{ image.alt }}" title="{{ image.title }}">
 
-          
+          {% if post.video %}
             <div class="post-video">Video</div>
-          
+          {% endif %}
         </div>
         
         <div class="media__content">
           <header class="post-title">
             <h2>
-              <a class="post-link" href="/event/scientifically-accurate-pokemon">Scientifically Accurate Pokemon!</a>
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
             </h2>
           </header>
 
           <footer class="post-meta">
-            <time>Mar 8, 2015</time>
+            <time>{{ post.date | date: "%b %-d, %Y" }}</time>
           </footer>
           
           <p class="post-content">
-            Amination Domination High-Def doesn’t think Pokemon is realistic enough, so they made their own version and fixed some things.
-
-
+            {{ post.excerpt | strip_html | truncatewords: 20 }}
           </p>
 
-          <a class="post-continue" href="/event/scientifically-accurate-pokemon">Continue</a>
+          <a class="post-continue" href="{{ post.url | prepend: site.baseurl }}">Continue</a>
 
         </div>
         
       </article>
-    
-      <article class="media" itemProp="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-        
-        <div class="media__image">
-          
-          <img src="/downloads/hello-world.gif" alt="Post Image" title="512x512 mutha fackas">
-
-          
-        </div>
-        
-        <div class="media__content">
-          <header class="post-title">
-            <h2>
-              <a class="post-link" href="/test/hello-world">Hello World</a>
-            </h2>
-          </header>
-
-          <footer class="post-meta">
-            <time>Jan 19, 2015</time>
-          </footer>
-          
-          <p class="post-content">
-            This is a terrible little post all about how, my life got twisted upside down. 
-
-
-          </p>
-
-          <a class="post-continue" href="/test/hello-world">Continue</a>
-
-        </div>
-        
-      </article>
-    
+    {% endfor %}
 
   </div>
 
-  <!-- Pagination Links -->
-<div class="pagination">
-
-	<div class="pull-right">
-		Page 1 of 2
-	</div>
-	
-	<div class="pull-left">
-		
-
-		
-
-			
-			<span>1</span>
-
-			
-
-		
-
-			
-				<a href="/page/2">2</a>
-			
-
-		
-
-		
-			<a href="/page/2">Next &gt;</a>
-		
-	</div>
+  {% include _pagination.html %}
 
 </div>
-<script>
-  var key_prev = 44,
-      key_next = 46;
-
-  function keyEvent(event)
-  {
-    var key = event.keyCode || event.which;
-
-    if (key == key_prev) {
-    	
-    } else if (key == key_next) {
-    	
-    		location = "/page/2";
-    	
-    }
-  }
-
-  document.addEventListener("keypress", keyEvent);
-</script>
-
-</div>
-
-      </div>
-    </div>
-
-    <footer class="site-footer">
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">Welcome</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col  footer-col-1">
-        <ul class="contact-list">
-          <li>Welcome</li>
-          <li>&copy;2015 JASON STEWART </li>
-          <li><a href="mailto:your-email@domain.com">your-email@domain.com</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col  footer-col-2">
-        <h3>Members</h3>
-        <ul class="categories">
-          
-            <li>
-              Jason
-            </li>
-          
-            <li>
-              Tom
-            </li>
-          
-        </ul>
-      </div>
-
-      <div class="footer-col  footer-col-3">
-        <p class="text">Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-</p>
-      </div>
-    </div>
-
-  </div>
-
-</footer>
-
-
-  </body>
-
-</html>

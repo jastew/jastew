@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<div class="post">
+
+  <header class="post-header">
+
+    {% assign image = page.image %}
+    <!-- <div class="post__image">
+      <img src="{{ image.src }}" alt="{{ image.alt }}" title="{{ image.title }}">
+    </div> -->
+
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-meta">
+      {{ page.date | date: "%b %-d, %Y" }}
+      
+      {% if page.author %}
+        {{ page.author }}
+      {% endif %}
+      {% if page.meta %}
+        {{ page.meta }}
+      {% endif %}
+    </p>
+  </header>
+
+  <article class="post-content">
+    {{ content }}
+  </article>
+
+  <ul class="post-tags">
+    Tags: 
+      <li class="post-tag">{{ page.tags | join: '</li>, <li class="post-tag">' }}</li>
+    </li>
+  </ul>
+
+</div>
