@@ -186,6 +186,7 @@
 .post-meta {
     margin-bottom: 8px;
     font-size: $small-font-size;
+    font-style: italic;
     line-height: 1;
     color: $grey-color;
 }
@@ -296,7 +297,7 @@
 @media screen and (min-width: $on-palm) {
     .media__image {
         float: left;
-        width: 200px;
+        width: 250px;
     }
 }
 
