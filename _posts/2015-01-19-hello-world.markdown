@@ -5,8 +5,8 @@ categories: test
 tags:
   - 2015
   - testing
-#image:
-#  src: /downloads/hello-world.gif
+image:
+  src: /downloads/hello-world.jpg
 ---
 
 This is a terrible little post all about how, my life got twisted upside down. 
