@@ -286,6 +286,8 @@
 
     &__image {
         position: relative;
+        overflow: hidden;
+        max-height: 120px;
     }
 
     &__content {
@@ -298,6 +300,8 @@
     .media__image {
         float: left;
         width: 250px;
+        max-height: none;
+        min-height: 200px;
     }
 }
 
