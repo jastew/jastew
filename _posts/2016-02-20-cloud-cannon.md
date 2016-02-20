@@ -8,8 +8,6 @@ tags:
   - testing
 ---
 
-This is an awesome entry about the amazing and fantastic cloudcannon.
+![](/uploads/versions/geodude---x----458-215x---.png)This is an awesome entry about the amazing and fantastic cloudcannon.
 
 > I think it will really fit my clients needs
-
-![](/uploads/versions/geodude---x----458-215x---.png)
