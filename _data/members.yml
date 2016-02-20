@@ -1,8 +1,9 @@
----
 - name: Jason
   age: 23
   image: jason.jpg
-
 - name: Tom
+  age: 25
+  image: tom.jpg
+- name: Mick
   age: 25
   image: tom.jpg
